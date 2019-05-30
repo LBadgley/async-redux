@@ -9,6 +9,7 @@ const logger = store => next => action => {
 const logger2 = store => next => action => {
   console.log('i am another middleware!', action);
   next(action);
+  console.log('i am another middleware', store.getState());
 };
 
 function reducer(state = {}, action) {
